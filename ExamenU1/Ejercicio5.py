@@ -17,10 +17,10 @@ def mostrar(cadena):
 def main():
     cadena = capturar()
     while True:
-        opcion = input("Desea ingresar otra cadena? (S/N): ")
-        if opcion.upper() == "S":
+        opcion = input("Desea ingresar otra cadena? (Si/No): ")
+        if opcion.upper() == "SI":
             cadena += " " + capturar()
-        elif opcion.upper() == "N":
+        elif opcion.upper() == "NO":
             break
         else:
             print("Opcion no valida")
