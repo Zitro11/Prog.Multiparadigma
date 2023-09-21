@@ -1,11 +1,3 @@
-#Crear un programa que lea del teclado el nombre de un archivo en formato .csv(Productos.csv)
-# , para que al menos con 20 lineas de entrada realice lo siguiente mediante una funcion:
-# Crear un segundo archivo con el nombre libre a elegir, que sera el llenado en base a lo siguiente:
-# Nombre de producto en caso de existir otro producto con el mismo nombre se realizara lo siguiente:
-# Verificar si hay diferencias en el 'precio' o 'cantidad minima a comprar',de ser asi pedirle al usuario
-# mediante la consola elegir uno de los 2 valores a conservar y solo mostrar una linea del producto con los
-# valores modificados
-
 import csv
 
 def leer_csv(nombre_archivo):
@@ -15,60 +7,54 @@ def leer_csv(nombre_archivo):
     return data
 
 def escribir_csv(nombre_archivo, data):
-    with open(nombre_archivo, mode='w+', newline='') as file:
+    with open(nombre_archivo, mode='w', newline='') as file:
         fieldnames = data[0].keys()
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(data)
 
-def copiar_producto(data, nombre_producto):
-    productos_encontrados = []
-    for producto in data:
-        if producto['Nombre del producto'] == nombre_producto:
-            productos_encontrados.append(producto)
-    
-    if len(productos_encontrados) == 0:
-        return None  # No se encontró el producto
-    elif len(productos_encontrados) == 1:
-        return productos_encontrados[0]  # Solo hay un producto encontrado
-    else:
-        # Hay múltiples productos con el mismo nombre, mostrar y permitir al usuario elegir
-        print(f"Se encontraron {len(productos_encontrados)} productos con el nombre '{nombre_producto}':")
-        for i, producto in enumerate(productos_encontrados, start=1):
-            print(f"{i}. Producto: {producto}")
-        
-        while True:
-            try:
-                opcion = int(input(f"Ingrese el número del producto que desea copiar (1-{len(productos_encontrados)}): "))
-                if 1 <= opcion <= len(productos_encontrados):
-                    return productos_encontrados[opcion - 1]  # Retornar el producto seleccionado
-                else:
-                    print("Opción inválida. Ingrese un número válido.")
-            except ValueError:
-                print("Opción inválida. Ingrese un número válido.")
-
 if __name__ == "__main__":
-    archivo_original = r'C:\Users\melis\Documents\Andy\9NO\Prog.Multiparadigma\ExamenU1\Ejercicio4\Productos.csv'
-    archivo_actualizado = r'C:\Users\melis\Documents\Andy\9NO\Prog.Multiparadigma\ExamenU1\Ejercicio4\Salida.csv'
+    directorio = r'C:\Users\melis\Documents\Andy\9NO\Prog.Multiparadigma\ExamenU1\Ejercicio4\\'  # Ruta del directorio
 
-    data = leer_csv(archivo_original)
+    archivo_original = input("Ingrese el nombre del archivo CSV de entrada: ")
+    archivo_actualizado = input("Ingrese el nombre del archivo CSV de salida: ")
+
+    # Combina la ruta del directorio con los nombres de archivo ingresados por el usuario
+    ruta_archivo_original = directorio + archivo_original
+    ruta_archivo_actualizado = directorio + archivo_actualizado
+
+    data = leer_csv(ruta_archivo_original)
     productos_copiados = []
 
-    while True:
-        # Solicitar al usuario el nombre del producto a copiar
-        nombre_producto = input("Ingrese el nombre del producto que desea copiar (o 'fin' para terminar): ")
-        
-        if nombre_producto.lower() == 'fin':
-            break  # Salir del bucle si el usuario ingresa 'fin'
-        
-        producto_copiado = copiar_producto(data, nombre_producto)
+    for producto in data:
+        nombre_producto = producto['Nombre del producto']
 
-        if producto_copiado:
-            # Agregar el producto copiado a la lista de productos copiados
-            productos_copiados.append(producto_copiado)
+        # Buscar productos con el mismo nombre en la lista de productos copiados
+        productos_similares = [p for p in productos_copiados if p['Nombre del producto'] == nombre_producto]
+
+        if productos_similares:
+            # Hay productos similares, verificar diferencias en precio y cantidad mínima
+            for p in productos_similares:
+                if p['Precio'] != producto['Precio'] or p['Cantidad minima a comprar'] != producto['Cantidad minima a comprar']:
+                    print(f"Diferencia encontrada para el producto '{nombre_producto}':")
+                    print(f"1. Precio: {p['Precio']} | 2. Precio: {producto['Precio']}")
+                    print(f"1. Cantidad Minima: {p['Cantidad minima a comprar']} | 2. Cantidad Minima: {producto['Cantidad minima a comprar']}")
+                    
+                    while True:
+                        eleccion = input("Seleccione qué valor desea conservar (1 o 2): ")
+                        if eleccion in ['1', '2']:
+                            # Actualizar el producto en la lista con el valor elegido
+                            if eleccion == '1':
+                                producto['Precio'] = p['Precio']
+                                producto['Cantidad minima a comprar'] = p['Cantidad minima a comprar']
+                            break
+                        else:
+                            print("Opción inválida. Seleccione 1 o 2.")
+
         else:
-            print(f'El producto "{nombre_producto}" no se encontró en el archivo original.')
+            # No hay productos similares, agregar el producto a la lista de productos copiados
+            productos_copiados.append(producto)
 
     # Guardar los datos actualizados en el nuevo archivo CSV
-    escribir_csv(archivo_actualizado, productos_copiados)
-    print(f'Productos copiados y guardados en {archivo_actualizado}')
+    escribir_csv(ruta_archivo_actualizado, productos_copiados)
+    print(f'Productos copiados y guardados en {ruta_archivo_actualizado}')
