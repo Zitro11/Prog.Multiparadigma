@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listado de Peliculas</h1>
+    <div>
+        <a href="{{url_for('appelicula.agregar')}}">AGREGAR</a>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Duracion</th>
+                    <th>Genero</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pelicula in peliculas%}
+                <tr>
+                    <td>{{pelicula.id}}</td>
+                    <td>{{pelicula.nombre}}</td>
+                    <td>{{pelicula.duracion}}</td>
+                    <td>{{pelicula.genero}}</td>
+                    <td></td>
+                    <td><a href="editar/{{pelicula.id}}">Editar</a></td>
+                    <td><a href="eliminar/{{pelicula.id}}">Eliminar</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

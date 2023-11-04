@@ -1,0 +1,110 @@
+03:26:43 PM : DEBUG [cursorDelPool.py]:10 Inicio bloque with
+03:26:43 PM : DEBUG [conex.py]:35 Conexion obtenida <connection object at 0x0000029A0E636240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+03:26:43 PM : DEBUG [cursorDelPool.py]:16 Se ejecuta exit
+03:26:43 PM : DEBUG [conex.py]:41 Conexion regresada <connection object at 0x0000029A0E636240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+03:26:43 PM : DEBUG [test.py]:14 Alumno agregado: Francisco, filas afectadas: 1
+03:31:13 PM : DEBUG [cursorDelPool.py]:10 Inicio bloque with
+03:31:14 PM : DEBUG [conex.py]:35 Conexion obtenida <connection object at 0x000001D8709BE240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+03:31:14 PM : DEBUG [cursorDelPool.py]:16 Se ejecuta exit
+03:31:14 PM : DEBUG [conex.py]:41 Conexion regresada <connection object at 0x000001D8709BE240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+03:31:14 PM : DEBUG [test.py]:19 Alumno actualizado: Andy, filas afectadas: 1
+03:33:37 PM : DEBUG [cursorDelPool.py]:10 Inicio bloque with
+03:33:37 PM : DEBUG [conex.py]:35 Conexion obtenida <connection object at 0x000001C5B1C0E240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+03:33:37 PM : DEBUG [cursorDelPool.py]:16 Se ejecuta exit
+03:33:37 PM : DEBUG [conex.py]:41 Conexion regresada <connection object at 0x000001C5B1C0E240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+03:33:37 PM : DEBUG [test.py]:24 Alumno eliminado: 3, filas afectadas: 1
+03:34:43 PM : DEBUG [cursorDelPool.py]:10 Inicio bloque with
+03:34:43 PM : DEBUG [conex.py]:35 Conexion obtenida <connection object at 0x00000254D942E130; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+03:34:43 PM : DEBUG [cursorDelPool.py]:16 Se ejecuta exit
+03:34:43 PM : DEBUG [conex.py]:41 Conexion regresada <connection object at 0x00000254D942E130; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+03:34:43 PM : DEBUG [test.py]:29 
+            id_alumno: 4,
+            Nombre: Rafa, 
+            Apellido: Mosqueda, 
+            Matricula: 19100223
+            
+03:34:43 PM : DEBUG [test.py]:29 
+            id_alumno: 5,
+            Nombre: Andy, 
+            Apellido: Ibarra, 
+            Matricula: 19100255
+            
+03:34:43 PM : DEBUG [test.py]:29 
+            id_alumno: 8,
+            Nombre: Francisco, 
+            Apellido: Ortiz, 
+            Matricula: 19100230
+            
+03:49:14 PM : DEBUG [cursorDelPool.py]:10 Inicio bloque with
+03:49:15 PM : DEBUG [conex.py]:35 Conexion obtenida <connection object at 0x000001B69F76E240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+03:49:15 PM : DEBUG [cursorDelPool.py]:16 Se ejecuta exit
+03:49:15 PM : DEBUG [conex.py]:41 Conexion regresada <connection object at 0x000001B69F76E240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+03:49:15 PM : DEBUG [test.py]:37 Maestro registrado: Luis, filas afectadas: 1
+03:50:53 PM : DEBUG [cursorDelPool.py]:10 Inicio bloque with
+03:50:53 PM : DEBUG [conex.py]:35 Conexion obtenida <connection object at 0x000002090212E240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+03:50:53 PM : DEBUG [cursorDelPool.py]:16 Se ejecuta exit
+03:50:53 PM : DEBUG [conex.py]:41 Conexion regresada <connection object at 0x000002090212E240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+03:50:53 PM : DEBUG [test.py]:42 Maestro actualizado Juan, filas afectadas: 1
+03:52:18 PM : DEBUG [cursorDelPool.py]:10 Inicio bloque with
+03:52:18 PM : DEBUG [conex.py]:35 Conexion obtenida <connection object at 0x000001BD70EDE240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+03:52:18 PM : DEBUG [cursorDelPool.py]:16 Se ejecuta exit
+03:52:18 PM : DEBUG [conex.py]:41 Conexion regresada <connection object at 0x000001BD70EDE240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+03:52:18 PM : DEBUG [test.py]:47 Maestro eliminado: 1, filas afectadas: 1
+03:53:23 PM : DEBUG [cursorDelPool.py]:10 Inicio bloque with
+03:53:23 PM : DEBUG [conex.py]:35 Conexion obtenida <connection object at 0x000001C5C1DDE130; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+03:53:23 PM : DEBUG [cursorDelPool.py]:16 Se ejecuta exit
+03:53:23 PM : DEBUG [conex.py]:41 Conexion regresada <connection object at 0x000001C5C1DDE130; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+03:53:23 PM : DEBUG [test.py]:52 
+            id_maestro: 2,
+            Nombre: Juan, 
+            Apellido: Ahumada, 
+            Formacion: Ingeniero
+            
+03:53:23 PM : DEBUG [test.py]:52 
+            id_maestro: 4,
+            Nombre: Luis, 
+            Apellido: Castillo, 
+            Formacion: Ingeniero
+            
+04:01:54 PM : DEBUG [cursorDelPool.py]:10 Inicio bloque with
+04:01:55 PM : DEBUG [conex.py]:35 Conexion obtenida <connection object at 0x000001B78242E240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+04:01:55 PM : DEBUG [cursorDelPool.py]:16 Se ejecuta exit
+04:01:55 PM : DEBUG [conex.py]:41 Conexion regresada <connection object at 0x000001B78242E240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+04:01:55 PM : DEBUG [test.py]:60 Materia registrada: Redes, filas afectadas: 1
+04:03:35 PM : DEBUG [cursorDelPool.py]:10 Inicio bloque with
+04:03:35 PM : DEBUG [conex.py]:35 Conexion obtenida <connection object at 0x00000239D812E240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+04:03:35 PM : DEBUG [cursorDelPool.py]:16 Se ejecuta exit
+04:03:35 PM : DEBUG [conex.py]:41 Conexion regresada <connection object at 0x00000239D812E240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+04:03:35 PM : DEBUG [test.py]:60 Materia registrada: Python, filas afectadas: 1
+04:05:09 PM : DEBUG [cursorDelPool.py]:10 Inicio bloque with
+04:05:09 PM : DEBUG [conex.py]:35 Conexion obtenida <connection object at 0x000001FA2B02E240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+04:05:09 PM : DEBUG [cursorDelPool.py]:16 Se ejecuta exit
+04:05:09 PM : DEBUG [conex.py]:41 Conexion regresada <connection object at 0x000001FA2B02E240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+04:05:09 PM : DEBUG [test.py]:65 Materia actualizada: Web, filas afectadas: 1
+04:06:39 PM : DEBUG [cursorDelPool.py]:10 Inicio bloque with
+04:06:40 PM : DEBUG [conex.py]:35 Conexion obtenida <connection object at 0x0000014AAD3AE240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+04:06:40 PM : DEBUG [cursorDelPool.py]:16 Se ejecuta exit
+04:06:40 PM : DEBUG [conex.py]:41 Conexion regresada <connection object at 0x0000014AAD3AE240; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+04:06:40 PM : DEBUG [test.py]:70 Id materia eliminada: 1, filas afectadas: 1
+04:07:38 PM : DEBUG [cursorDelPool.py]:10 Inicio bloque with
+04:07:39 PM : DEBUG [conex.py]:35 Conexion obtenida <connection object at 0x000001AC92CBE130; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+04:07:39 PM : DEBUG [cursorDelPool.py]:16 Se ejecuta exit
+04:07:39 PM : DEBUG [conex.py]:41 Conexion regresada <connection object at 0x000001AC92CBE130; dsn: 'user=postgres password=xxx dbname=ejemplos host=localhost port=5050', closed: 0>
+04:07:39 PM : DEBUG [test.py]:75 
+            id_materia: 3,
+            Nombre: Web, 
+            Creditos: 3, 
+            Horas: 25
+            
+04:07:39 PM : DEBUG [test.py]:75 
+            id_materia: 5,
+            Nombre: Redes, 
+            Creditos: 4, 
+            Horas: 30
+            
+04:07:39 PM : DEBUG [test.py]:75 
+            id_materia: 6,
+            Nombre: Python, 
+            Creditos: 6, 
+            Horas: 35
+            

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listado de Directores</h1>
+    <div>
+        <a href="{{url_for('appdirector.agregar')}}">AGREGAR</a>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Pais</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for director in directores%}
+                <tr>
+                    <td>{{director.id}}</td>
+                    <td>{{director.nombre}}</td>
+                    <td>{{director.apellido}}</td>
+                    <td>{{director.pais}}</td>
+                    <td></td>
+                    <td><a href="editarDirector/{{director.id}}">Editar</a></td>
+                    <td><a href="eliminarDirector/{{director.id}}">Eliminar</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

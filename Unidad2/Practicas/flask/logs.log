@@ -1,0 +1,692 @@
+ERROR:flask_migrate:Error: Directory migrations already exists and is not empty
+ERROR:flask_migrate:Error: Directory migrations already exists and is not empty
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /index [GET]
+Traceback (most recent call last):
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\flask\rutas\Actor\actor.py", line 12, in inicio
+    return render_template('index.html',actores=actores)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\israe\Desktop\ejercicios\flask\rutas\Actor\templates\index.html", line 11, in top-level template code
+    <a href="{{url_for('appersona.agregar')}}">AGREGAR</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'appersona.agregar'. Did you mean 'appactor.agregar' instead?
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:45:20] "[35m[1mGET /index HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /index [GET]
+Traceback (most recent call last):
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\flask\rutas\Actor\actor.py", line 12, in inicio
+    return render_template('index.html',actores=actores)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\israe\Desktop\ejercicios\flask\rutas\Actor\templates\index.html", line 11, in top-level template code
+    <a href="{{url_for('appersona.agregar')}}">AGREGAR</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'appersona.agregar'. Did you mean 'appactor.agregar' instead?
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:45:25] "[35m[1mGET /index HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\flask\rutas\Actor\actor.py", line 12, in inicio
+    return render_template('index.html',actores=actores)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\israe\Desktop\ejercicios\flask\rutas\Actor\templates\index.html", line 11, in top-level template code
+    <a href="{{url_for('appersona.agregar')}}">AGREGAR</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'appersona.agregar'. Did you mean 'appactor.agregar' instead?
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:46:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:46:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:49:02] "GET / HTTP/1.1" 200 -
+ERROR:app:Exception on /agregar [GET]
+Traceback (most recent call last):
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\flask\rutas\Actor\actor.py", line 18, in agregar
+    actorForm = actorForm(obj=actor)
+                ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'actorForm' where it is not associated with a value
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:49:42] "[35m[1mGET /agregar HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:52:16] "GET / HTTP/1.1" 200 -
+ERROR:app:Exception on /agregar [GET]
+Traceback (most recent call last):
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\flask\rutas\Actor\actor.py", line 25, in agregar
+    return render_template('agregar.html',forma=actorForm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\israe\Desktop\ejercicios\flask\rutas\Actor\templates\agregar.html", line 22, in top-level template code
+    {{forma.sexo.label}}<br/>
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'forms.ActorForm object' has no attribute 'sexo'
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:52:18] "[35m[1mGET /agregar HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:53:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:53:18] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:53:25] "[32mPOST /agregar HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:53:26] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:54:09] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:56:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:56:22] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:56:30] "[32mPOST /agregar HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:56:30] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:57:21] "[33mGET /editar HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:57:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:57:45] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:57:52] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:58:09] "[32mPOST /agregar HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:58:09] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:58:22] "[33mGET /editar<2> HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:59:16] "[33mGET /editar<int:2> HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 21:59:45] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:01:46] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:01:52] "[33mGET /editar/2 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:02:34] "[32mGET /eliminar/2 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:02:34] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:04:11] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:04:12] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:04:22] "[32mPOST /agregar HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:04:22] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:04:26] "GET /editar/4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:04:47] "[32mPOST /editar/4 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:04:48] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:05:04] "[32mGET /eliminar/1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:05:04] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:30:04] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:30:23] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:30:27] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:30:36] "[32mPOST /agregar HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:30:36] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:30:41] "GET /editar/5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:30:46] "[32mPOST /editar/5 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:30:47] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:30:50] "GET /editar/4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:30:54] "[32mPOST /editar/4 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:30:54] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:31:00] "[32mGET /eliminar/4 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:31:00] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:46:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:47:13] "[33mGET /home.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:47:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:47:20] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:49:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:49:03] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:49:12] "[32mPOST /agregar HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:49:13] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:49:15] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:49:24] "[32mPOST /agregar HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:49:24] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:49:26] "GET /editar/7 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:49:30] "[32mPOST /editar/7 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:49:30] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:49:32] "[32mGET /eliminar/7 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:49:32] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:53:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:53:47] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 22:53:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:05:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:06:26] "GET / HTTP/1.1" 200 -
+ERROR:app:Exception on /dashboard [GET]
+Traceback (most recent call last):
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\flask\app.py", line 29, in dashboard
+    return render_template('dashboard.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: dashboard.html
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:06:32] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\flask\app.py", line 25, in pagina_de_inicio
+    return render_template('dashboard.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: dashboard.html
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:08:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\flask\app.py", line 25, in dashboard
+    return render_template('dashboard.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\israe\Desktop\ejercicios\flask\templates\dashboard.html", line 11, in top-level template code
+    <li><a href="{{ url_for('apppelicula.inicio') }}">Gestión de Películas</a></li>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\werkzeug\routing\map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'apppelicula.inicio'. Did you mean 'appelicula.inicio' instead?
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:11:59] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:15:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:15:16] "GET /Actoresindex HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:15:23] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:15:29] "[32mPOST /agregar HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:15:29] "GET /Actoresindex HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:15:32] "GET /editar/8 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:15:35] "[32mPOST /editar/8 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:15:36] "GET /Actoresindex HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:15:38] "[32mGET /eliminar/8 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:15:38] "GET /Actoresindex HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:15:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:15:49] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:16:04] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:16:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:16:52] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:16:55] "GET /Actoresindex HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:18:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:18:10] "GET /Actoresindex HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:18:14] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:18:20] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:19:10] "GET /Actoresindex HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:20:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:20:06] "GET /Actoresindex HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:20:10] "GET /Directorindex HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:21:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:21:35] "GET /Actoresindex HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:21:38] "GET /Directorindex HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:24:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:24:30] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:24:33] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:24:38] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:26:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:26:45] "GET /index/Actor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:26:47] "GET /index/Director HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:26:50] "GET /index/Pelicula HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:26:53] "GET /index/Actor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:26:57] "GET /agregar/Actor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:27:00] "[32mPOST /agregar/Actor HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:27:00] "GET /index/Actor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:27:02] "[33mGET /index/editar/9 HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:28:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:28:57] "GET /index/Actor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:29:00] "[33mGET /index/editarActor/9 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:31:01] "[33mGET /index/eliminarActor/9 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:32:21] "GET /agregar/Actor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:33:05] "GET /index/Director HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:33:07] "GET /agregar/Director HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:33:10] "GET /index/Pelicula HTTP/1.1" 200 -
+ERROR:app:Exception on /agregar/Pelicula [GET]
+Traceback (most recent call last):
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\flask\rutas\Pelicula\pelicula.py", line 24, in agregar
+    return render_template('agregarP.html',forma=peliculaForm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\israe\Desktop\ejercicios\flask\rutas\Pelicula\templates\agregarP.html", line 22, in top-level template code
+    {{forma.genero.label}}<br/>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'forms.PeliculaForm object' has no attribute 'genero'
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:33:12] "[35m[1mGET /agregar/Pelicula HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:33:15] "GET /index/Director HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:33:16] "GET /agregar/Director HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:33:18] "GET /index/Pelicula HTTP/1.1" 200 -
+ERROR:app:Exception on /agregar/Pelicula [GET]
+Traceback (most recent call last):
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\flask\rutas\Pelicula\pelicula.py", line 24, in agregar
+    return render_template('agregarP.html',forma=peliculaForm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\israe\Desktop\ejercicios\flask\rutas\Pelicula\templates\agregarP.html", line 22, in top-level template code
+    {{forma.genero.label}}<br/>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'forms.PeliculaForm object' has no attribute 'genero'
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:33:19] "[35m[1mGET /agregar/Pelicula HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /agregar/Pelicula [GET]
+Traceback (most recent call last):
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\flask\rutas\Pelicula\pelicula.py", line 24, in agregar
+    return render_template('agregarP.html',forma=peliculaForm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\israe\Desktop\ejercicios\flask\rutas\Pelicula\templates\agregarP.html", line 22, in top-level template code
+    {{forma.genero.label}}<br/>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\israe\Desktop\ejercicios\.venv\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'forms.PeliculaForm object' has no attribute 'genero'
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:34:33] "[35m[1mGET /agregar/Pelicula HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:35:46] "GET /index/Director HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:35:47] "GET /agregar/Director HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:35:58] "[32mPOST /agregar/Director HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:35:59] "GET /index/Director HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:36:01] "[33mGET /index/editarDirector/1 HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:38:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:38:41] "GET /index/Actor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:38:44] "GET /agregar/Actor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:38:46] "GET /agregar/Actor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:38:50] "[32mPOST /agregar/Actor HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:38:50] "GET /index/Actor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:38:52] "[33mGET /index/editar/10 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:39:37] "[33mGET /index/eliminar/10 HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:40:29] "[33mGET /index HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:40:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:40:34] "GET /index/Actor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:40:36] "GET /agregar/Actor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:40:38] "[33mGET /index/eliminar/10 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:42:00] "[33mGET /index/editar/10 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:42:21] "GET /agregar/Actor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:42:33] "[33mGET /index/editar/3 HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:43:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:43:45] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:43:45] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:43:47] "GET /editar/10 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:43:53] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:43:57] "GET /editar/10 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:44:06] "[32mPOST /editar/10 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:44:07] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:44:10] "[32mGET /eliminar/9 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:44:10] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:44:23] "[32mGET /eliminar/10 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:44:23] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:44:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:47:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:47:12] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:47:14] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:47:20] "[32mPOST /agregar HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:47:21] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:47:22] "GET /editar/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:47:27] "[32mPOST /editar/11 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:47:27] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:47:29] "[32mGET /eliminar/11 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:47:29] "[33mGET /eliminar/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:47:52] "[33mGET /eliminar/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:49:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:49:15] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:49:16] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:49:25] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:49:29] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:49:37] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:49:40] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:49:41] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:49:43] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:49:46] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:49:51] "[32mPOST /agregar HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:49:51] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:49:52] "GET /editarA/12 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:49:59] "[32mPOST /editarA/12 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:49:59] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:50:01] "[32mGET /eliminarA/12 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:50:01] "[33mGET /eliminarA/12 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:50:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:50:38] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:50:45] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:52:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:52:21] "GET /indexActor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:52:22] "[33mGET /editarA/12 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:52:27] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:52:29] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:52:32] "GET /indexActor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:52:37] "GET /agregarActor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:52:41] "[32mPOST /agregarActor HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:52:41] "[32mPOST /agregarActor HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:52:41] "GET /indexActor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:52:52] "GET /editarActor/13 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:52:57] "[32mPOST /editarActor/13 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:52:57] "GET /indexActor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:53:08] "[32mGET /eliminarActor/13 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:53:09] "GET /indexActor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:53:16] "[32mGET /eliminarActor/14 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:53:16] "[33mGET /eliminarActor/14 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:53:32] "[33mGET /eliminarActor/14 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:53:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:53:36] "GET /indexActor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:53:38] "[32mGET /eliminarActor/6 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:53:38] "[33mGET /eliminarActor/6 HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:57:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:57:03] "GET /indexActor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:57:07] "GET /indexDirector HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:57:09] "GET /indexPelicula HTTP/1.1" 200 -

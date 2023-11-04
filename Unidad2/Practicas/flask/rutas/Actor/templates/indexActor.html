@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listado de Actores</h1>
+    <div>
+        <a href="{{url_for('appactor.agregar')}}">AGREGAR</a>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Sexo</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for actor in actores%}
+                <tr>
+                    <td>{{actor.id}}</td>
+                    <td>{{actor.nombre}}</td>
+                    <td>{{actor.apellido}}</td>
+                    <td>{{actor.sexo}}</td>
+                    <td></td>
+                    <td><a href="editarActor/{{actor.id}}">Editar</a></td>
+                    <td><a href="eliminarActor/{{actor.id}}">Eliminar</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
