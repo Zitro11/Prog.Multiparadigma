@@ -690,3 +690,149 @@ INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:57:02] "GET / HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:57:03] "GET /indexActor HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:57:07] "GET /indexDirector HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [03/Nov/2023 23:57:09] "GET /indexPelicula HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:10:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:10:19] "GET /indexActor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:10:22] "GET /indexDirector HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:10:25] "GET /indexPelicula HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:10:31] "GET /indexActor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:10:32] "GET /agregarActor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:10:51] "[32mPOST /agregarActor HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:10:51] "GET /indexActor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:10:53] "GET /editarActor/15 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:10:56] "[32mPOST /editarActor/15 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:10:56] "GET /indexActor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:10:58] "[32mGET /eliminarActor/15 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:10:58] "GET /indexActor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:11:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:11:05] "GET /indexDirector HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:11:06] "GET /agregarDirector HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:11:12] "[32mPOST /agregarDirector HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:11:12] "GET /indexDirector HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:11:27] "GET /editarDirector/2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:11:32] "[32mPOST /editarDirector/2 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:11:32] "GET /indexDirector HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:11:37] "[32mGET /eliminarDirector/2 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:11:37] "GET /indexDirector HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:11:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:11:45] "GET /indexPelicula HTTP/1.1" 200 -
+ERROR:app:Exception on /agregarPelicula [GET]
+Traceback (most recent call last):
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\Unidad2\Practicas\flask\rutas\Pelicula\pelicula.py", line 24, in agregar
+    return render_template('agregarP.html',forma=peliculaForm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\Unidad2\Practicas\flask\rutas\Pelicula\templates\agregarP.html", line 22, in top-level template code
+    {{forma.genero.label}}<br/>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'forms.PeliculaForm object' has no attribute 'genero'
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:11:48] "[35m[1mGET /agregarPelicula HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /agregarPelicula [GET]
+Traceback (most recent call last):
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\Unidad2\Practicas\flask\rutas\Pelicula\pelicula.py", line 24, in agregar
+    return render_template('agregarP.html',forma=peliculaForm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\Unidad2\Practicas\flask\rutas\Pelicula\templates\agregarP.html", line 22, in top-level template code
+    {{forma.genero.label}}<br/>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'forms.PeliculaForm object' has no attribute 'genero'
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:12:39] "[35m[1mGET /agregarPelicula HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:13:23] "GET /indexDirector HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:13:24] "GET /agregarDirector HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:13:27] "GET /indexPelicula HTTP/1.1" 200 -
+ERROR:app:Exception on /agregarPelicula [GET]
+Traceback (most recent call last):
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\Unidad2\Practicas\flask\rutas\Pelicula\pelicula.py", line 24, in agregar
+    return render_template('agregarP.html',forma=peliculaForm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\Unidad2\Practicas\flask\rutas\Pelicula\templates\agregarP.html", line 22, in top-level template code
+    {{forma.genero.label}}<br/>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PC\UNI\SEMESTRE 9\Prog.Multiparadigma\.venv\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'forms.PeliculaForm object' has no attribute 'genero'
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:13:30] "[35m[1mGET /agregarPelicula HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:15:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:15:38] "GET /indexPelicula HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:15:38] "GET /indexPelicula HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:15:39] "GET /agregarPelicula HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:16:00] "[32mPOST /agregarPelicula HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:16:00] "GET /indexPelicula HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Nov/2023 00:16:12] "[33mGET /editar/1 HTTP/1.1[0m" 404 -

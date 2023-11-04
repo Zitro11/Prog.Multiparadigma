@@ -17,5 +17,5 @@ class DirectorForm(FlaskForm):
 class PeliculaForm(FlaskForm):
     nombre = StringField('Nombre', validators=[DataRequired()])
     duracion = IntegerField('Duración', validators=[DataRequired()])
-    categoria = StringField('Categoría', validators=[DataRequired()])
+    genero = StringField('Categoría', validators=[DataRequired()])
     enviar = SubmitField('Enviar')
