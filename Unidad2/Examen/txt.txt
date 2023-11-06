@@ -1,0 +1,3 @@
+Andy Ibarra Villanueva 19100201 - Django
+Francisco Israel Ortiz Merida 19100230 - Postgres
+Luis Otoniel Soto Maldonado - 19100799 - Flask
