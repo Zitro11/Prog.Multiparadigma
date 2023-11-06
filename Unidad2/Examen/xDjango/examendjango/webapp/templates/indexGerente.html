@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% load static %}
+    <h1>Listado de Gerentes</h1>
+    <a href="nuevoGerente">Agregar</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>nombre</th>
+                <th>apellido</th>
+                <th>puesto</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for gerente in gerentes%}
+                <tr>
+                    <td>{{gerente.id}}</td>
+                    <td>{{gerente.nombre}}</td>
+                    <td>{{gerente.apellido}}</td>
+                    <td>{{gerente.puesto}}</td>
+                    <td><a href="detalleGerente/{{gerente.id}}">Detalle</a></td>
+                    <td><a href="editarGerente/{{gerente.id}}">Editar</a></td>
+                    <td><a href="eliminarGerente/{{gerente.id}}">Eliminar</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
