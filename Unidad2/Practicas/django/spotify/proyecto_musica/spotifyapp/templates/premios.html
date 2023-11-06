@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista de Premios</h1>
+    <ul>
+        {% for premio in premios %}
+            <li>
+                <strong>Nombre:</strong> {{ premio.nombre }} <br>
+                <strong>Categoría:</strong> {{ premio.categoria }} <br>
+                <strong>Ubicación:</strong> {{ premio.ubicacion }} <br>
+                <br>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
