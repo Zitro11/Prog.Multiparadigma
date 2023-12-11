@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Showdown 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/styles.css')}}">
+    <link rel="icon" href="{{url_for('static', filename = 'logo.ico')}}" type="image/x-icon">
+</head>
+<body onload="checkToken()">
+    <header>
+        <a href="/main" id="imgLogo"><img src="{{ url_for('static', filename = 'logo.png') }}" id="logo" alt="" style="width: 70px; height: 70px;"></a>
+        <h1 id="title">Pokemon Showdown 2</h1>
+        <a href="/login" id="logoff" class="opt2"><img src="{{url_for('static', filename = 'logout.png')}}" style="width: 70px; height: 70px;"></a>
+    </header>   
+    <div class="sidebar">
+        <!-- <div id="sidebar1"> -->
+            <a href="/entrenador" id="imgLogo"><img src="{{ url_for('static', filename = 'trainer.png') }}" id="logo" alt="" style="width: 70px; height: 70px;"></a>
+            <a href="/pokemon" id="imgLogo"><img src="{{ url_for('static', filename = 'pokemon.png') }}" id="logo" alt="" style="width: 70px; height: 70px;"></a>
+            <a href="/equipo" id="imgLogo"><img src="{{ url_for('static', filename = 'team.png') }}" id="logo" alt="" style="width: 70px; height: 70px;"></a>
+            <!-- </div> -->
+            
+    </div>
+
+    <div class="content">
+        {%block content%}
+        {% endblock %}
+    </div>
+</body>
+<script>
+    function checkToken(){
+        const token = localStorage.getItem('token')
+        if(token){
+            fetch(`/login?token=${token}`)
+            .then( response => response.json())
+            .then(data =>{
+                console.log(data.message)
+                if(data.message!="valid token"){
+                    localStorage.removeItem('token')
+                    window.location.href='/login'
+                }
+            })
+            .catch(error=>{
+                window.location.href='/login'
+            })
+        }else{
+            window.location.href='/login'
+        }
+    }
+</script>
+</html>

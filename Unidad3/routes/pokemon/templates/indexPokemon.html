@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block content %}
+<center>
+    <h1 style="color: rgb(194, 103, 17); background-color: white; width: fit-content; height: fit-content; border: 3px solid black; border-radius: 100px; padding: 10px;">POKEMON</h1>
+</center>    
+<br>
+    <div class="form-container">
+        <fieldset class="group" style="display: block; width: fit-content;">
+            <table class="tabla" border = "1px", style="background-color: aliceblue; border-radius: 10px;">
+                <thead>
+                    <tr>
+                        <td colspan="8" style="padding: 5px; border-radius: 10px;">
+                            <a href="{{url_for('apppokemon.Agregar')}}" align = "center">
+                                <button style="display: block; width:100%; height: 40px; border-radius: 10px;">Agregar Pokemon</button>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr style="background-color:rgb(192, 119, 50); color: white;">
+                        <th style="border-radius: 5px;">ID</th>
+                        <th style="border-radius: 5px;">Nombre</th>
+                        <th style="border-radius: 5px;">Tipo</th>
+                        <th style="border-radius: 5px;">Item</th>
+                        <th style="border-radius: 5px;">Habilidad</th>
+                        <th style="border-radius: 5px;">Naturaleza</th>
+                        <th style="border-radius: 5px;">Sprite Icon</th>
+                        <th style="border-radius: 5px;">Sprite Front</th>
+                        <th style="border-radius: 5px;">Movimiento 1</th>
+                        <th style="border-radius: 5px;">Movimiento 2</th>
+                        <th style="border-radius: 5px;">Movimiento 3</th>
+                        <th style="border-radius: 5px;">Movimiento 4</th>
+                        <th style="border-radius: 5px;">Nombre del Entrenador</th>
+                        <th style="border-radius: 5px;"></th>
+                        <th style="border-radius: 5px;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pkm in pokemon %}
+                    <tr>
+                        <td style="border-radius: 5px;">{{pkm.id}}</td>
+                        <td style="border-radius: 5px;">{{pkm.nombre}}</td>
+                        <td style="border-radius: 5px;">{{pkm.tipo}}</td>
+                        <td style="border-radius: 5px;">{{pkm.item}}</td>
+                        <td style="border-radius: 5px;">{{pkm.habilidad}}</td>
+                        <td style="border-radius: 5px;">{{pkm.naturaleza}}</td>
+                        <td style="border-radius: 5px;">{{pkm.sprite_icon}}</td>
+                        <td style="border-radius: 5px;">{{pkm.sprite_front}}</td>
+                        <td style="border-radius: 5px;">{{pkm.movimiento1}}</td>
+                        <td style="border-radius: 5px;">{{pkm.movimiento2}}</td>
+                        <td style="border-radius: 5px;">{{pkm.movimiento3}}</td>
+                        <td style="border-radius: 5px;">{{pkm.movimiento4}}</td>
+                        <td style="border-radius: 5px;">{{pkm.nombre_entrenador}}</td>
+                        <td style="border-radius: 5px;"><a href="pokemon/edit/{{pkm.id}}"><button style="border-radius: 5px;">Editar</button></a></td>
+                        <td style="border-radius: 5px;"><a href="pokemon/delete/{{pkm.id}}"><button style="border-radius: 5px;">Eliminar</button></a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </fieldset>
+    </div>
+{% endblock %}

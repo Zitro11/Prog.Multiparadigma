@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<center>
+    <form method="post">
+            <fieldset style="background-color: lightgray; border: 2px solid black; border-radius: 20px; width: fit-content; ">
+            <legend style="background-color: black; text-align: center; color: white; font-size: 24px; border-radius: 20px; padding: 5px;">Actualizar Entrenador</legend>
+            {{ editTrainer.csrf_token }}
+            <p>
+                {{ editTrainer.nombre.label }}
+                {{ editTrainer.nombre(size = 30) }}
+            </p>
+            <p>
+                {{ editTrainer.password.label }}
+                {{ editTrainer.password(size = 30) }}
+            </p>
+            <p>
+                {{ editTrainer.admin.label }}
+                {{ editTrainer.admin }}
+            </p>
+            <p>
+                {{ editTrainer.enviar() }}
+            </p>
+        </fieldset>
+    </form>
+</center>
+{% endblock %}

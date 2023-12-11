@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Entrenador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/styles.css')}}">
+    <link rel="icon" href="{{url_for('static', filename = 'logo.ico')}}" type="image/x-icon">
+</head>
+<header>
+    <img src="{{url_for('static', filename='/logo.png')}}" width="20%" height="20%" id="logo">
+    <h1 id="title">Pokemon Showdown 2</h1>
+</header>  
+<body>
+    <center>
+        <form id="sign-form" class="form-login">
+            <fieldset class="groupbox">
+                <p>
+                    <h1>REGISTRO</h1>
+                </p>
+                <p>
+                    <label for="nombre">Nombre:</label>
+                    <input class="textbox" type="text" id="nombre" name="nombre">
+                </p>
+                <p>
+                    <label for="password">Password:</label>
+                    <input class="textbox" type="password" id="password" name="password"> 
+                </p>
+                <button type="submit" id="sign-btn" class="btnEnviar">Sign In</button>
+            </fieldset>
+        </form>
+        <div style="display: block; padding: 5px; background-color: rgb(240, 86, 86); color: #FFF; border-radius: 5px; margin-top: 10px; width: fit-content; height: fit-content; border: 2px solid #FFF;">
+            ¿Ya tienes una cuenta? <a href="/login">¡Inicia Sesión!</a>
+        </div>
+        </center>
+
+    <script>
+        const signForm=document.querySelector('#sign-form');
+        const signButton=document.querySelector('#sign-btn');
+        signButton.addEventListener('click' ,(e)=>{
+            e.preventDefault();
+            const nombre = document.querySelector('#nombre').value;
+            const password=document.querySelector('#password').value;
+
+            fetch('/sign',{
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify({
+                    'nombre':nombre,
+                    'password':password
+                })
+            })
+            .then(response => response.json())
+            .then(data=>{
+                window.location.href='/login'
+            })
+        })
+    </script>
+</body>
+</html>

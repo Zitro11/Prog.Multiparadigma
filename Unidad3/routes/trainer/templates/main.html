@@ -1,0 +1,215 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="form-container">
+<fieldset style="background-color: white; color: black; border: solid 2px black; border-radius: 30px;">
+    <legend id="leyenda" align ="left" style="font-size: 20px; font: bold; background-color: white; color: black; border: solid 2px black; border-radius: 20px; padding: 5px;">Menu</legend>
+    <div id="resumenEquiposAll" style="padding-top: 5px; padding-bottom: 5px;">
+        <table width = '100%' margin="5px" border="1px">
+            <title style="display: block; font-size: 16px;">Equipos Registrados</title>
+            <thead>
+                <tr style="background-color:rgb(97, 11, 146); color: white;">
+                    <th style="border-radius: 5px;">ID</th>
+                    <th style="border-radius: 5px;">Nombre del Equipo</th>
+                    <th style="border-radius: 5px;">Nombre_entrenador</th>
+                    <th style="border-radius: 5px;">Pokemon 1</th>
+                    <th style="border-radius: 5px;">Pokemon 2</th>
+                    <th style="border-radius: 5px;">Pokemon 3</th>
+                    <th style="border-radius: 5px;">Pokemon 4</th>
+                    <th style="border-radius: 5px;">Pokemon 5</th>
+                    <th style="border-radius: 5px;">Pokemon 6</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for t in team %}
+                <tr>
+                    <td style="border-radius: 5px;">{{t.id}}</td>
+                    <td style="border-radius: 5px;">{{t.nombre_entrenador}}</td>
+                    <td style="border-radius: 5px;">{{t.id_entrenador}}</td>
+                    <td style="border-radius: 5px;">{{t.pokemon1}}</td>
+                    <td style="border-radius: 5px;">{{t.pokemon2}}</td>
+                    <td style="border-radius: 5px;">{{t.pokemon3}}</td>
+                    <td style="border-radius: 5px;">{{t.pokemon4}}</td>
+                    <td style="border-radius: 5px;">{{t.pokemon5}}</td>
+                    <td style="border-radius: 5px;">{{t.pokemon6}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div id="resumenPokemonAll" style="padding-top: 5px; padding-bottom: 5px;">
+        <table width = '100%' margin="5px" border="1px">
+            <title style="display: block; font-size: 16px;">Pokemon Registrados</title>
+            <thead>
+                <tr style="background-color:rgb(130, 34, 139); color: white;">
+                    <th style="border-radius: 5px;">ID</th>
+                    <th style="border-radius: 5px;">Nombre</th>
+                    <th style="border-radius: 5px;">Tipo</th>
+                    <th style="border-radius: 5px;">Item</th>
+                    <th style="border-radius: 5px;">Habilidad</th>
+                    <th style="border-radius: 5px;">Naturaleza</th>
+                    <th style="border-radius: 5px;">Sprite_icon</th>
+                    <th style="border-radius: 5px;">Sprite_front</th>
+                    <th style="border-radius: 5px;">Movimiento 1</th>
+                    <th style="border-radius: 5px;">Movimiento 2</th>
+                    <th style="border-radius: 5px;">Movimiento 3</th>
+                    <th style="border-radius: 5px;">Movimiento 4</th>
+                    <th style="border-radius: 5px;">Nombre_entrenador</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pkm in pokemon %}
+                <tr>
+                    <td style="border-radius: 5px;">{{pkm.id}}</td>
+                    <td style="border-radius: 5px;">{{pkm.nombre}}</td>
+                    <td style="border-radius: 5px;">{{pkm.tipo}}</td>
+                    <td style="border-radius: 5px;">{{pkm.item}}</td>
+                    <td style="border-radius: 5px;">{{pkm.habilidad}}</td>
+                    <td style="border-radius: 5px;">{{pkm.naturaleza}}</td>
+                    <td style="border-radius: 5px;">{{pkm.sprite_icon}}</td>
+                    <td style="border-radius: 5px;">{{pkm.sprite_front}}</td>
+                    <td style="border-radius: 5px;">{{pkm.movimiento1}}</td>
+                    <td style="border-radius: 5px;">{{pkm.movimiento2}}</td>
+                    <td style="border-radius: 5px;">{{pkm.movimiento3}}</td>
+                    <td style="border-radius: 5px;">{{pkm.movimiento4}}</td>
+                    <td style="border-radius: 5px;">{{pkm.nombre_entrenador}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div id="resumenEntrenadores" style="padding-top: 5px; padding-bottom: 5px;">
+        <table width = '100%' margin="5px" border="1px">
+            <title style="display: block; font-size: 16px;">Últimos 3 Entrenadores Agregados</title>
+            <thead>
+                <tr style="background-color:rgb(153, 45, 163); color: white;">
+                    <th style="border-radius: 5px;">ID</th>
+                    <th style="border-radius: 5px;">Nombre</th>
+                    <th style="border-radius: 5px;">Password</th>
+                    <th style="border-radius: 5px;">Admin</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tr in trainer %}
+                <tr>
+                    <td style="border-radius: 5px;">{{tr.id}}</td>
+                    <td style="border-radius: 5px;">{{tr.nombre}}</td>
+                    <td style="border-radius: 5px;">{{tr.password}}</td>
+                    {% if tr.admin == True %}
+                        <td style="border-radius: 5px;">Si</td>
+                    {% else %}
+                        <td style="border-radius: 5px;">No</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div id="resumenPokemon3" style="padding-top: 5px; padding-bottom: 5px;">
+        <table width = '100%' margin="5px" border="1px">
+            <title style="display: block; font-size: 16px;">Pokemon Registrados</title>
+            <thead>
+                <tr style="background-color:rgb(130, 34, 139); color: white;">
+                    <th style="border-radius: 5px;">ID</th>
+                    <th style="border-radius: 5px;">Nombre</th>
+                    <th style="border-radius: 5px;">Tipo</th>
+                    <th style="border-radius: 5px;">Item</th>
+                    <th style="border-radius: 5px;">Habilidad</th>
+                    <th style="border-radius: 5px;">Naturaleza</th>
+                    <th style="border-radius: 5px;">Sprite_icon</th>
+                    <th style="border-radius: 5px;">Sprite_front</th>
+                    <th style="border-radius: 5px;">Movimiento 1</th>
+                    <th style="border-radius: 5px;">Movimiento 2</th>
+                    <th style="border-radius: 5px;">Movimiento 3</th>
+                    <th style="border-radius: 5px;">Movimiento 4</th>
+                    <th style="border-radius: 5px;">Nombre_entrenador</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pkm3 in pokemon %}
+                <tr>
+                    <td style="border-radius: 5px;">{{pkm3.id}}</td>
+                    <td style="border-radius: 5px;">{{pkm3.nombre}}</td>
+                    <td style="border-radius: 5px;">{{pkm3.tipo}}</td>
+                    <td style="border-radius: 5px;">{{pkm3.item}}</td>
+                    <td style="border-radius: 5px;">{{pkm3.habilidad}}</td>
+                    <td style="border-radius: 5px;">{{pkm3.naturaleza}}</td>
+                    <td style="border-radius: 5px;">{{pkm3.sprite_icon}}</td>
+                    <td style="border-radius: 5px;">{{pkm3.sprite_front}}</td>
+                    <td style="border-radius: 5px;">{{pkm3.movimiento1}}</td>
+                    <td style="border-radius: 5px;">{{pkm3.movimiento2}}</td>
+                    <td style="border-radius: 5px;">{{pkm3.movimiento3}}</td>
+                    <td style="border-radius: 5px;">{{pkm3.movimiento4}}</td>
+                    <td style="border-radius: 5px;">{{pkm3.nombre_entrenador}}</td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div id="resumenEquipos3" style="padding-top: 5px; padding-bottom: 5px;">
+        <table width = '100%' margin="5px" border="1px">
+            <title style="display: block; font-size: 16px;">Equipos Registrados</title>
+            <thead>
+                <tr style="background-color:rgb(97, 11, 146); color: white;">
+                    <th style="border-radius: 5px;">ID</th>
+                    <th style="border-radius: 5px;">Nombre del Equipo</th>
+                    <th style="border-radius: 5px;">Nombre_entrenador</th>
+                    <th style="border-radius: 5px;">Pokemon 1</th>
+                    <th style="border-radius: 5px;">Pokemon 2</th>
+                    <th style="border-radius: 5px;">Pokemon 3</th>
+                    <th style="border-radius: 5px;">Pokemon 4</th>
+                    <th style="border-radius: 5px;">Pokemon 5</th>
+                    <th style="border-radius: 5px;">Pokemon 6</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for t3 in team %}
+                <tr>
+                    <td style="border-radius: 5px;">{{t3.id}}</td>
+                    <td style="border-radius: 5px;">{{t3.nombredelequipo}}</td>
+                    <td style="border-radius: 5px;">{{t3.nombre_entrenador}}</td>
+                    <td style="border-radius: 5px;">{{t3.pokemon1}}</td>
+                    <td style="border-radius: 5px;">{{t3.pokemon2}}</td>
+                    <td style="border-radius: 5px;">{{t3.pokemon3}}</td>
+                    <td style="border-radius: 5px;">{{t3.pokemon4}}</td>
+                    <td style="border-radius: 5px;">{{t3.pokemon5}}</td>
+                    <td style="border-radius: 5px;">{{t3.pokemon6}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</fieldset>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        CargarLeyenda();
+    });
+
+    function CargarLeyenda() {
+        var Admin = localStorage.getItem('admin') == 1;
+        var leyendaElement = document.getElementById("leyenda");
+        var panelPkm = document.getElementById("resumenPokemonAll");
+        var panelTeam = document.getElementById("resumenEquiposAll");
+        var panelTrainer = document.getElementById("resumenEntrenadores");
+        var panelPkm3 = document.getElementById("resumenPokemon3");
+        var panelTeam3 = document.getElementById("resumenEquipos3");
+
+        if (Admin) {
+            leyendaElement.innerHTML = "Panel de Administración";
+            panelTeam.style.display = "block";
+            panelPkm.style.display = "block";
+            panelTrainer.style.display = "block";
+            panelPkm3.style.display = "none";
+            panelTeam3.style.display = "none";
+        } else {
+            leyendaElement.innerHTML = "Panel Principal";
+            panelTeam3.style.display = "block";
+            panelPkm3.style.display = "block";
+            panelPkm.style.display = "none";
+            panelTeam.style.display = "none";
+            panelTrainer.style.display = "none";
+        }
+    }
+</script>
+{% endblock %}

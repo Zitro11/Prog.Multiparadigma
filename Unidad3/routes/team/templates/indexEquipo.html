@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+<center>
+    <h1 style="color: rgb(202, 20, 20); background-color: white; width: fit-content; height: fit-content; border: 3px solid black; border-radius: 100px; padding: 10px;">EQUIPOS</h1>
+</center>    
+<br>
+<div class="form-container">
+    <fieldset class="group" style="display: block; width: fit-content;">
+        <table class="tabla" border = "1px", style="background-color: aliceblue; border-radius: 10px;">
+            <thead>
+                <tr>
+                    <td colspan="8" style="padding: 5px; border-radius: 10px;">
+                        <a href="{{url_for('appteam.Agregar')}}" align = "center">
+                            <button style="display: block; width:100%; height: 40px; border-radius: 10px;">Agregar Equipo</button>
+                        </a>
+                    </td>
+                </tr>
+                <tr style="background-color:rgb(197, 65, 65); color: white;">
+                    <th style="border-radius: 5px;">ID</th>
+                    <th style="border-radius: 5px;">Nombre del Equipo</th>
+                    <th style="border-radius: 5px;">ID Entrenador</th>
+                    <th style="border-radius: 5px;">ID Pokemon 1</th>
+                    <th style="border-radius: 5px;">ID Pokemon 2</th>
+                    <th style="border-radius: 5px;">ID Pokemon 3</th>
+                    <th style="border-radius: 5px;">ID Pokemon 4</th>
+                    <th style="border-radius: 5px;">ID Pokemon 5</th>
+                    <th style="border-radius: 5px;">ID Pokemon 6</th>
+                    <th style="border-radius: 5px;"></th>
+                    <th style="border-radius: 5px;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for t in team %}
+                <tr>
+                    <td style="border-radius: 5px;">{{t.id}}</td>
+                    <td style="border-radius: 5px;">{{t.nombredelequipo}}</td>
+                    <td style="border-radius: 5px;">{{t.id_entrenador}}</td>
+                    <td style="border-radius: 5px;">{{t.id_pokemon1}}</td>
+                    <td style="border-radius: 5px;">{{t.id_pokemon2}}</td>
+                    <td style="border-radius: 5px;">{{t.id_pokemon3}}</td>
+                    <td style="border-radius: 5px;">{{t.id_pokemon4}}</td>
+                    <td style="border-radius: 5px;">{{t.id_pokemon5}}</td>
+                    <td style="border-radius: 5px;">{{t.id_pokemon6}}</td>
+                    <td style="border-radius: 5px;"><a href="equipo/edit/{{prod.id}}"><button style="border-radius: 5px;">Editar</button></a></td>
+                    <td style="border-radius: 5px;"><a href="equipo/delete/{{prod.id}}"><button style="border-radius: 5px;">Eliminar</button></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </fieldset>
+</div>
+{% endblock %}

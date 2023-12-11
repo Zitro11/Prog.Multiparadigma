@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+    <form method="post">
+        <fieldset style="background-color: lightgray; border: 2px solid black; border-radius: 10px; width: fit-content;">
+            <legend style="background-color: black; color: white; font-size: 24px; border-radius: 10px; padding: 5px;">Actualizar Equipo</legend>
+            {{ editarTeam.csrf_token }}
+            <p>
+                {{ editarTeam.nombredelequipo.label }}
+                {{ editarTeam.nombredelequipo(size = 30) }}
+            </p>
+            <p>
+                {{ editarTeam.id_pokemon1.label }}
+                {{ editarTeam.id_pokemon1(size = 30) }}
+            </p>
+            <p>
+                {{ editarTeam.id_pokemon2.label }}
+                {{ editarTeam.id_pokemon2(size = 30) }}
+            </p>
+            <p>
+                {{ editarTeam.id_pokemon3.label }}
+                {{ editarTeam.id_pokemon3(size = 30) }}
+            </p>
+            <p>
+                {{ editarTeam.id_pokemon4.label }}
+                {{ editarTeam.id_pokemon4(size = 30) }}
+            </p>
+            <p>
+                {{ editarTeam.id_pokemon5.label }}
+                {{ editarTeam.id_pokemon5(size = 30) }}
+            </p>
+            <p>
+                {{ editarTeam.id_pokemon6.label }}
+                {{ editarTeam.id_pokemon6(size = 30) }}
+            </p>
+            <p>
+                {{ editarTeam.enviar() }}
+            </p>
+        </fieldset>
+    </form>
+{%endblock%}

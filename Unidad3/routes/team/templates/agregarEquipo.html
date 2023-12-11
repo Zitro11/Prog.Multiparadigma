@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+    <form method="post">
+        <fieldset style="background-color: lightgray; border: 2px solid black; border-radius: 10px; width: fit-content;">
+            <legend style="background-color: black; color: white; font-size: 24px; border-radius: 10px; padding: 5px;">Nuevo Equipo</legend>
+            {{ nuevoTeam.csrf_token }}
+            <p>
+                {{ nuevoTeam.nombredelequipo.label }}
+                {{ nuevoTeam.nombredelequipo(size = 30) }}
+            </p>
+            <p>
+                <input type="hidden" name="id_entrenador" value="{{ id_entrenador }}">
+            </p>
+            <p>
+                {{ nuevoTeam.id_pokemon1.label }}
+                {{ nuevoTeam.id_pokemon1(size = 30) }}
+            </p>
+            <p>
+                {{ nuevoTeam.id_pokemon2.label }}
+                {{ nuevoTeam.id_pokemon2(size = 30) }}
+            </p>
+            <p>
+                {{ nuevoTeam.id_pokemon3.label }}
+                {{ nuevoTeam.id_pokemon3(size = 30) }}
+            </p>
+            <p>
+                {{ nuevoTeam.id_pokemon4.label }}
+                {{ nuevoTeam.id_pokemon4(size = 30) }}
+            </p>
+            <p>
+                {{ nuevoTeam.id_pokemon5.label }}
+                {{ nuevoTeam.id_pokemon5(size = 30) }}
+            </p>
+            <p>
+                {{ nuevoTeam.id_pokemon6.label }}
+                {{ nuevoTeam.id_pokemon6(size = 30) }}
+            </p>
+            <p>
+                {{ nuevoTeam.enviar() }}
+            </p>
+        </fieldset>
+    </form>
+{%endblock%}
